@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeu de football</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="flex flex-row justify-between bg-slate-900 p-3">
+              <h1 class="  flex text-sky-50" > 
+            <img  class="size-6 font-bold" src="/img/football co.png" alt="" > TACHKILA</h1>
+            
+        </div>
+            <ul class="flex gap-6 place-items-center" >
+                <div class="border border-indigo-600 rounded-[10vw] w-2 h-2 bg-orange-500 font-bold"></div>
+                <li class=" text-orange-500 font-bold">GB</li>
+                <div class="border border-indigo-600 rounded-[10vw] w-2 h-2 bg-blue-700 font-bold"></div>
+                <li class="text-blue-700 font-bold">DEF </li>
+                <div class="border border-indigo-600 rounded-[10vw] w-2 h-2 bg-green-600 font-bold"></div>
+                <li class=" text-green-600 font-bold">MIL</li>
+                <div class="border border-indigo-600 rounded-[10vw] w-2 h-2 bg-red-600 font-bold"></div>
+                <li class=" text-red-600 font-bold">ATT</li>
+
+            </ul>
+         <div class="flex gap-4">
+         <p class="text-sky-50 font-light">Schéma </p> 
+        <p class=" text-sky-50 bg-slate-950 rounded p-1"> 4-4-2<p/>
+        </div>
+    </header>
+
+
+
+    <main class="flex text-white  bg-gray-950">
+   <section class=" w-1/4 bg-slate-900 h-svh  p-6"> 
+    <button class="bg-green-600 text-white font-bold w-full mt-4 mb-6 p-4 rounded-xl"> + Ajouter un joueur</button>
+    
+    <div class="flex justify-between items-center mb-4">
+    <h2 class="font-bold text-white">Effectif</h2>
+    <p class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1 text-sm">
+        1 joueur(s)
+    </p>
+    </div>
+    <p class="text-sm text-slate-400 font-normal mb-4">
+    Cliquez sur un joueur placé pour voir sa case sur le terrain.
+    <i class="fa-solid fa-pen-to-square"></i> pour modifier.
+    <i class="fa-solid fa-trash"></i> pour supprimer.
+</p>
+    
+
+<div id="popup-joueur" class="  head inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
+
+    <div class="w-full max-w-md rounded-2xl border border-slate-700 bg-slate-900 p-6 shadow-2xl">
+
+        <div class="mb-6 flex items-center justify-between">
+            <h2 class="text-xl font-bold text-white">
+                Ajouter un joueur
+            </h2>
+
+            <button type="button"
+                class="text-2xl text-slate-400 hover:text-white">
+                &times;
+            </button>
+        </div>
+
+        <form>
+            <div class="mb-4">
+                <label class="mb-2 block text-sm text-slate-300">
+                    Nom complet
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Ex. Ayoub Mansouri"
+                    class="w-full rounded-lg border border-slate-700 bg-slate-800 p-3 text-white outline-none focus:border-green-500">
+            </div>
+
+            <div class="mb-4">
+                <label class="mb-2 block text-sm text-slate-300">
+                    Numéro du maillot
+                </label>
+
+                <input
+                    type="number"
+                    placeholder="Ex. 10"
+                    class="w-full rounded-lg border border-slate-700 bg-slate-800 p-3 text-white outline-none focus:border-green-500">
+            </div>
+
+            <div class="mb-6">
+                <label class="mb-2 block text-sm text-slate-300">
+                    Poste
+                </label>
+
+                <select
+                    class="w-full rounded-lg border border-slate-700 bg-slate-800 p-3 text-white outline-none focus:border-green-500">
+                    <option value="">Choisir un poste</option>
+                    <option>GB - Gardien</option>
+                    <option>DG - Défenseur gauche</option>
+                    <option>DC - Défenseur central</option>
+                    <option>DD - Défenseur droit</option>
+                    <option>MG - Milieu gauche</option>
+                    <option>MC - Milieu central</option>
+                    <option>MD - Milieu droit</option>
+                    <option>BU - Buteur</option>
+                </select>
+            </div>
+
+            <div class="flex gap-3">
+                <button type="button"
+                    class="flex-1 rounded-lg bg-slate-700 p-3 font-semibold text-white hover:bg-slate-600">
+                    Annuler
+                </button>
+
+                <button type="submit"
+                    class="flex-1 rounded-lg bg-green-600 p-3 font-semibold text-white hover:bg-green-500">
+                    Ajouter
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+    
+ 
+
+
+   </section >
+
+     <section  class="terrain-continair ">
+        
+        <div class="tiran terin1"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran tiran16"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        <div class="tiran"></div>
+        
+      </div>
+     </section>
+   
+
+
+
+
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,105 @@
+.terrain-continair {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 10px;
+
+    width: 50vw;
+    height: 70vh;
+    padding: 15px;
+
+    background-color: #080f20;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    margin: auto;
+    grid-template-areas:
+        ". . . . . . . . . . . ."
+        ". . . DG DG . . MG MG . . ."
+        ". . . . . . . . . . BU1 BU1"
+        "GB GB DC1 DC1 . . MC1 MC1 . . . ."
+        "GB GB . . . . . . . . . ."
+        "GB GB DC2 DC2 . . MC2 MC2 . . . ."
+        ". . . . . . . . . . BU2 BU2"
+        ". . . DD DD . . MD MD . . ."
+        ". . . . . . . . . . . .";
+}
+
+.tiran {
+    background-color: #131e30;
+    border: 1px solid #263449;
+    border-radius: 10px;
+   
+}
+
+
+
+.terrain-continair > div:nth-child(16) {
+    grid-area: DG;
+    background-color: rgb(3, 3, 84) !important;
+    border: 3px dashed rgb(68, 130, 245) !important;
+    color: rgb(68, 130, 245);
+}
+
+.terrain-continair > div:nth-child(39) {
+    grid-area: DC1;
+    background-color: rgb(3, 3, 84) !important;
+    border: 3px dashed rgb(68, 130, 245) !important;
+    color: rgb(68, 130, 245);
+}
+.terrain-continair > div:nth-child(63) {
+    grid-area: DC2;
+    background-color: rgb(3, 3, 84) !important;
+    border: 3px dashed rgb(68, 130, 245) !important;
+    color: rgb(68, 130, 245);
+}
+.terrain-continair > div:nth-child(88) {
+    grid-area: DD;
+    background-color: rgb(3, 3, 84) !important;
+    border: 3px dashed rgb(68, 130, 245) !important;
+    color: rgb(68, 130, 245);
+}
+.terrain-continair > div:nth-child(20) {
+    grid-area: MG;
+    background-color: rgb(1, 45, 1) !important;
+    border: 3px dashed rgb(110, 247, 117) !important;
+    color: rgb(110, 247, 117);
+}
+.terrain-continair > div:nth-child(43) {
+    grid-area: MC1;
+    background-color: rgb(1, 45, 1) !important;
+    border: 3px dashed rgb(110, 247, 117) !important;
+    color: rgb(110, 247, 117);
+}
+
+.terrain-continair > div:nth-child(67) {
+    grid-area: MC2;
+    background-color: rgb(1, 45, 1) !important;
+    border: 3px dashed rgb(110, 247, 117) !important;
+    color: rgb(110, 247, 117);
+}
+.terrain-continair > div:nth-child(92) {
+    grid-area: MD;
+    background-color: rgb(1, 45, 1) !important;
+    border: 3px dashed rgb(110, 247, 117) !important;
+    color: rgb(110, 247, 117);
+}
+
+.terrain-continair > div:nth-child(35) {
+    grid-area: BU1;
+    background-color: rgb(63, 0, 0) !important;
+    border: 3px dashed rgb(255, 134, 134) !important;
+    color: rgb(255, 134, 134);
+}
+.terrain-continair > div:nth-child(83) {
+    grid-area: BU2;
+    background-color: rgb(63, 0, 0) !important;
+    border: 3px dashed rgb(255, 134, 134) !important;
+    color: rgb(255, 134, 134);
+}
+
+.terrain-continair > div:nth-child(37) {
+    grid-area: GB;
+    background-color: rgb(62, 62, 1) !important;
+    border: 3px dashed rgb(248, 248, 145) !important;
+}
