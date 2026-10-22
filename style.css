@@ -103,3 +103,8 @@
     background-color: rgb(62, 62, 1) !important;
     border: 3px dashed rgb(248, 248, 145) !important;
 }
+.formpop{
+    left: 150%;
+    visibility: visible;
+    transform: translate(-50% , -50%) scale(1);
+}
