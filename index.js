@@ -17,6 +17,7 @@ modal.classList.remove('formpop')
  const post= document.querySelector('.post')
  const formj= document.querySelector('.formj')
  const listj=[];
+ let compter= 0;
 
  form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -28,6 +29,9 @@ modal.classList.remove('formpop')
     };
 
     listj.push(jou);
+    //compter les joueur
+   compter = listj.length 
+nombrejoueur.textContent =compter +"joueur(s)";
 
     const parent = document.createElement("div");
     parent.classList.add(
@@ -58,24 +62,15 @@ modal.classList.remove('formpop')
     divchild.append(titre, parachild);
     parent.append(para, divchild);
     formj.append(parent);
+    const divicon= document
 
 
 
      form.reset();
     modal.classList.remove('formpop');
-    
+     hd.remove()
     
 });
-//   let comptj= 0 
-// // COMPTURE DE JOUEUR
-// ajoute.addEventListener('click' , () =>  {
-//     comptj ++ 
-//     const comptr= document.createElement("div")
-//     comptr.textContent= comptj  
-//     nombrejoueur.append(comptr)
-    
-
-
-// })
+const hd=document.querySelector('.haid')
 
  
