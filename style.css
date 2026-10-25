@@ -118,3 +118,6 @@
 .formj{
     display: flex;
 }
+.invalidnom{
+    color: red;
+}

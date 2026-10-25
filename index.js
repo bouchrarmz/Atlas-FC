@@ -4,14 +4,17 @@ const annuler=document.querySelector(".btn-annuler")
  const ajoutej=document.querySelector("#ajouterj")
  const form=document.querySelector("#form")
 const nombrejoueur= document.querySelector('.nbrjoueur')
-
+const hd=document.querySelector('.haid')
+const invalidnbr=document.querySelector('.invalidnumbr')
+const invalidnom=document.querySelector('.mesageinvalidN')
+//button ajoute et annuler 
 ajoute.addEventListener('click' , () =>  {
 modal.classList.add('formpop')
 })
 annuler.addEventListener('click' , () =>  {
 modal.classList.remove('formpop')
 })
- 
+ // aficherles joueurs 
  const nom= document.querySelector('.nom')
  const num = document.querySelector('.num')
  const post= document.querySelector('.post')
@@ -20,7 +23,20 @@ modal.classList.remove('formpop')
  let compter= 0;
 
  form.addEventListener('submit', (event) => {
-    event.preventDefault();
+   event.preventDefault()
+   let valid = true 
+   if (!regexnumbrejoueur.test(num.value.trim())){
+       invalidnbr.textContent=" entre le nom corect ";
+        valid= false
+    }
+     if (!regexnom.test(nom.value.trim())){
+        invalidnom.textContent="entre le nombre corect";
+        valid= false
+    }
+    if (!valid){
+        return;
+    };
+
 
     const jou = {
         nom: nom.value,
@@ -63,7 +79,7 @@ nombrejoueur.textContent =compter +"joueur(s)";
     parent.append(para, divchild);
     formj.append(parent);
     const divicon= document
-
+    
 
 
      form.reset();
@@ -71,6 +87,33 @@ nombrejoueur.textContent =compter +"joueur(s)";
      hd.remove()
     
 });
-const hd=document.querySelector('.haid')
+// ragex
+const regexnom=/^[a-zA-ZÀ-ÿ\s]{2,20}$/;
+const regexnumbrejoueur=/^([1-9]|10)$/;
+
+nom.addEventListener("input", function () {
+    if (nom.value.trim() === "") {
+        invalidnom.textContent = "";
+    } 
+    else if (!regexnom.test(nom.value.trim())) {
+        invalidnom.textContent = "Le nom est invalide";
+    } 
+    else {
+        invalidnom.textContent = "";
+    }
+});
+num.addEventListener("input", function(){
+    if (num.value.trim()===""){
+        invalidnbr.textContent="invalid nombre";
+    } else if (!regexnumbrejoueur.test(num.value.trim())){
+        num.textContent="entre le nombre entre 1-10";
+    } else { invalidnbr.textContent="";}
+
+});
+
+
+
+
+
 
  
