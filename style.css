@@ -1,4 +1,5 @@
 .terrain-continair {
+    /* background-image: url(img/terrain.png); */
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(12, 1fr);
@@ -117,7 +118,12 @@
 }
 .formj{
     display: flex;
+    justify-content: space-between;
 }
-.invalidnom{
+.invalidnbr{
     color: red;
 }
+.invalidnom{
+color: red;
+}
+
