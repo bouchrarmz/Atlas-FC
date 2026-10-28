@@ -75,13 +75,6 @@ function assignerJoueur(joueur, positionId) {
         return false;
     }
 
-    
-    if (positions[positionId].poste !== joueur.post) {
-        alert("Ce joueur ne peut pas occuper cette position !");
-        joueur.position = "";
-        sauvegarderJoueurs();
-        return false;
-    }
 
     // Verifier si occupée
     const occupee = listj.some(j =>
@@ -89,9 +82,13 @@ function assignerJoueur(joueur, positionId) {
     );
 
     if (occupee) {
-        const message= document.querySelector("# message")
+        const message= document.querySelector("#message")
         message.textContent =
         "Cette position est déjà occupée !";
+        message.classList.remove("hidden");
+        setTimeout(() => {
+        message.classList.add("hidden");
+    }, 3000);
 
         joueur.position = "";
         sauvegarderJoueurs();
